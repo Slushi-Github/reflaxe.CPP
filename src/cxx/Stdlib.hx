@@ -21,7 +21,7 @@ extern class Stdlib {
 	public static extern function intToString(i: Int): String;
 
 	@:native("memalign")
-	@:include("stdlib.h", true)
+	@:include("malloc.h", true)
 	public static extern function memalign(alignment: Int, size: Int): cxx.VoidPtr;
 
 	#if reflaxe_cpp_windows

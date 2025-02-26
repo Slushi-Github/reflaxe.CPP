@@ -47,6 +47,8 @@ return \"BSD\";
 return \"Linux\";
 #elif defined(__APPLE__) && defined(__MACH__)
 return \"Mac\";
+#elif defined(__WIIU__) && defined(__WUT__)
+return \"CafeOS\";
 #endif
 ");
 		return "";
