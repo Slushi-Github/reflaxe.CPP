@@ -24,6 +24,10 @@ extern class Stdlib {
 	@:include("malloc.h", true)
 	public static extern function memalign(alignment: Int, size: Int): cxx.VoidPtr;
 
+	@:native("calloc")
+	@:include("stdlib.h", true)
+	public static extern function calloc(num: Int, size: Int): cxx.VoidPtr;
+
 	#if reflaxe_cpp_windows
 
 	@:native("getenv_s")
