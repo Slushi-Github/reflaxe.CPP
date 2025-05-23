@@ -1,13 +1,17 @@
 package cxx;
 
+import cxx.num.SizeT;
+
 extern class SlushiUtil {
-    @:native("nullptr")
+    @:nativeFunctionCode("nullptr")
+    @:topLevel
     extern public static var nullptr:Untyped;
 
-    @:native("NULL")
+    @:nativeFunctionCode("NULL")
+    @:topLevel
     extern public static var NULL:Untyped;
 
     @:native("memcpy")
     @:include("string.h")
-    extern public static function memcpy(dest:VoidPtr, src:VoidPtr, count:UInt):Void;
+    extern public static function memcpy(dest:VoidPtr, src:VoidPtr, count:SizeT):Void;
 }
